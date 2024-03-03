@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_in_set">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/backButton"
+                    android:src="@drawable/back"
+                    android:layout_height="wrap_content"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="128dp"
+                    android:id="@+id/ava_in_set"
+                    android:src="@drawable/default_ava"
+                    android:layout_gravity="center"
+                    android:layout_height="128dp"/>
+
+                <LinearLayout
+                    android:id="@+id/change_color_mess"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_height="48dp">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:text="Color"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_weight="0"
+                        android:layout_width="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/color_icon"
+                        android:layout_height="32dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/change_emoji"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_height="48dp">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:layout_width="32dp"
+                        android:src="@drawable/emoji"
+                        android:layout_height="32dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/setting_nickname"
+                    android:layout_width="wrap_content"
+                    android:text="Nicknames"
+                    android:gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_height="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="More Actions"
+                    android:textColor="#455A64"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_height="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Notification"
+                    android:gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_height="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Ignore"
+                    android:gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_height="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Block"
+                    android:gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_height="48dp" />
+
+                <Button
+                    android:layout_width="256dp"
+                    android:id="@+id/unfriend"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text="Unfriend"
+                    android:background="@drawable/box_chat"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="Share Photos"
+                    android:textColor="#455A64"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_height="48dp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rc_photo_in_setting_friend_chat"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/frag_choose"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
